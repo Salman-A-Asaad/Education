@@ -1,0 +1,655 @@
+/* Set the variable */
+
+:root {
+  --main-color: #3c3d3b;
+  --second-color: #4a4b49;
+  --third-color: #02cc7c;
+}
+
+/* Set the basic font */
+
+* {
+  font-family: "Changa", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set the default container width with basic padding and margin and media quary for container */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Set the css style of navbar */
+
+nav {
+  width: 100%;
+  left: 0;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  height: 60px;
+  background-color: var(--second-color);
+}
+
+nav .container {
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .container .logo {
+  z-index: 5;
+  color: white;
+  width: fit-content;
+}
+
+nav .container svg {
+  z-index: 5;
+  display: none;
+  width: 30px;
+  height: 30px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav .container ul {
+  list-style: none;
+  display: flex;
+  z-index: 4;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.4s;
+}
+
+@media (max-width: 780px) {
+  nav .container ul {
+    position: absolute;
+    top: -240px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--second-color);
+    transition: all 0.4s;
+  }
+  nav .container ul.show {
+    top: 44px;
+  }
+  nav .container ul li {
+    margin-bottom: 15px;
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
+  nav .container svg {
+    display: block;
+  }
+}
+
+nav .container ul li {
+  text-transform: capitalize;
+}
+
+nav .container ul li a {
+  text-decoration: none;
+  color: #ccc;
+  margin-left: 20px;
+  transition: all 0.4s;
+}
+
+nav .container ul li a:hover {
+  color: white;
+}
+
+/* End navbar section css style */
+
+/* Set the css style of home section */
+
+.home {
+  padding-top: 10px;
+  background-color: var(--main-color);
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.home .container .first-row {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+@media (max-width: 780px) {
+  .home .container .first-row {
+    grid-template-columns: auto;
+  }
+}
+
+.home .container .first-row .first-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.home .container .first-row .first-column h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 70px;
+}
+
+.home .container .first-row .first-column h1 span:last-child {
+  color: var(--third-color);
+}
+
+@media (max-width: 780px) {
+  .home .container .first-row .first-column h1 {
+    padding-top: 20px;
+  }
+}
+
+.home .container .first-row .first-column button {
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  text-transform: capitalize;
+  background-color: var(--second-color);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home .container .first-row .secound-column img {
+  width: 100%;
+  height: auto;
+}
+
+.home .container .secound-row {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.home .container .secound-row .item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--second-color);
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.home .container .secound-row .item svg {
+  color: var(--third-color);
+  width: 40px;
+  height: 40px;
+}
+
+.home .container .secound-row .item .number {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.home .container .secound-row .item .number span:first-child {
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.home .container .secound-row .item .number span:last-child {
+  color: #ccc;
+  font-size: medium;
+  text-transform: capitalize;
+}
+
+/* End home section css style */
+
+/* Set the css style of about section */
+
+.about {
+  background-color: var(--main-color);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 780px) {
+  .about .container {
+    grid-template-columns: auto;
+  }
+}
+
+.about .container img {
+  width: 100%;
+  height: auto;
+}
+
+.about .container .text-about {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .container .text-about p:nth-child(1) {
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.about .container .text-about p:nth-child(2) {
+  color: #ccc;
+  width: 50%;
+  font-size: small;
+  margin-top: -5px;
+}
+
+@media (max-width: 780px) {
+  .about .container .text-about p:nth-child(2) {
+    width: 100%;
+  }
+}
+
+.about .container .text-about button {
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  text-transform: capitalize;
+  background-color: var(--second-color);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* End about section css style */
+
+/* Set the css style of courses section */
+
+.courses {
+  background-color: var(--main-color);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.courses h1 {
+  color: white;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.courses h1 span {
+  color: var(--third-color);
+}
+
+.courses .container .items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.courses .container .items .item {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--second-color);
+}
+
+.courses .container .items .item img {
+  height: auto;
+  width: 100%;
+}
+
+.courses .container .items .item h3 {
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.courses .container .items .item p {
+  color: #ccc;
+  padding: 5px;
+}
+
+/* End cources section css style */
+
+/* Set the css style of teachers section */
+
+.teachers {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--main-color);
+  padding-bottom: 10px;
+}
+
+.teachers h1 {
+  color: white;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.teachers h1 span {
+  color: var(--third-color);
+}
+
+.teachers .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.teachers .container .item {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.teachers .container .item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.teachers .container .item span {
+  text-transform: capitalize;
+}
+
+.comunication {
+  left: -100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  position: absolute;
+  width: 10%;
+  height: 50%;
+  transition: all 0.4s;
+}
+
+.comunication.show {
+  left: 0;
+}
+
+.comunication svg {
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 10px;
+  color: gray;
+  transition: all 0.4s;
+}
+
+.comunication svg:hover {
+  color: var(--third-color);
+}
+
+/* End teachers section css style */
+
+/* Set the css style of reviews section */
+
+.reviews {
+  padding: 10px;
+  background-color: var(--main-color);
+}
+
+.reviews h1 {
+  color: white;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.reviews h1 span {
+  color: var(--third-color);
+}
+
+.reviews .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.reviews .container .item p {
+  color: #ccc;
+}
+
+.reviews .container .item .person {
+  display: flex;
+}
+
+.reviews .container .item .person img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.reviews .container .item .person .name-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 80px;
+  margin-left: 10px;
+}
+
+.reviews .container .item .person .name-rate span {
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: medium;
+  letter-spacing: 1px;
+}
+
+.reviews .container .item .person .name-rate svg {
+  color: var(--third-color);
+}
+
+/* End reviews section css style */
+
+/* Set the css style of contact section */
+
+.contact {
+  padding: 10px;
+  background-color: var(--main-color);
+}
+
+.contact h1 {
+  color: white;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.contact h1 span {
+  color: var(--third-color);
+}
+
+.contact .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 780px) {
+  .contact .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact .container .image {
+  width: 100%;
+  height: auto;
+}
+
+.contact .container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .container form > * {
+  margin: 10px 0;
+}
+
+.contact .container form label {
+  color: white;
+  text-transform: capitalize;
+}
+
+.contact .container form input {
+  background-color: var(--second-color);
+  border: none;
+  border: none;
+  padding: 5px;
+  color: white;
+}
+
+.contact .container form input::placeholder {
+  text-transform: capitalize;
+}
+
+.contact .container form input:focus {
+  outline: none;
+}
+
+.contact .container form select {
+  background-color: var(--second-color);
+  border: none;
+  padding: 5px;
+  color: white;
+  outline: none;
+  text-transform: capitalize;
+}
+
+.contact .container form input[type="submit"] {
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+/* End contact section css style */
+
+/* Set the css style of footer section */
+
+.footer {
+  padding: 10px;
+  background-color: var(--second-color);
+}
+
+.footer .container .media {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.footer .container .media svg {
+  margin-left: 10px;
+  background-color: var(--main-color);
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  transition: all 0.4s;
+  color: gray;
+}
+
+.footer .container .media svg:hover {
+  color: white;
+  background-color: var(--third-color);
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.footer .container .copy-right {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ccc;
+  text-transform: capitalize;
+  padding-bottom: 5px;
+}
+
+.footer .container .copy-right span {
+  color: var(--third-color);
+  font-weight: bold;
+}
+
+/* End foter section css style */
